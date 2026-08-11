@@ -2,13 +2,24 @@
 
 ## 1. Push directo a main rechazado
 
-Protegimos la rama main para que no se pueda modificar directamente. Todo cambio se desarrolla en una rama aparte, se sube esa rama a GitHub y se abre un Pull Request contra main, si es correcto se realiza el merge. En un equipo, ese Pull Request puede requerir aprobación de otros desarrolladores, en este TP individual no exige aprobaciones porque las aprobaciones deben ser hechas por alguien distinto de quien lo solicito, pero igualmente obliga a pasar por el proceso de revisión y merge. Tambien activamos que el dueño del repositorio no pueda modificar directamente el main.
+![Push rechazado](img/push-rechazado.jpeg)
 
-## 2. El PR de la rama B no se puede mergear: conflicto
+GitHub rechaza el push directo porque la rama `main` está protegida y la regla también alcanza al dueño del repositorio.
 
-Lo que buscamos ahora es simular el conflicto entre dos personas, para eso creamos dos ramas que trabajan exactamente en la misma linea. primero trabajamos con la A, hacemos el pull request pero no relizamos el merge, luego con la B lo mismo, modificacmos la misma linea y relizamos el pull request. Una vez hecho esto hacemos el merge de A. Ahora al volver a la rama B nos encontramos el conflicto y vemos que no podemos hacer el merge sin antes resolver el conflicto.
+## 2. Conflicto en el PR de la rama B
 
-## 3. El PR de la rama B no se puede mergear: marcadores
+![Conflicto en PR](img/conflicto-pr.jpeg)
 
-luego de apretar resolver conflicts, nos topamos con las tres lineas de marcadores y las dos versiones de las lineas, elegi una que fue la B y borre el resto, aprete commit merge y quedo.
+GitHub detecta un conflicto entre las ramas A y B porque ambas modificaron la misma línea del README.
 
+## 3. Marcadores del conflicto
+
+![Marcadores del conflicto](img/conflicto-marcadores.jpeg)
+
+GitHub muestra los marcadores del conflicto con las dos versiones de la línea. elegimos luego solo una versión.
+
+## 4. Release v1.0.0 publicada
+
+![Release v1.0.0](img/release-v100.jpeg)
+
+Se muestra la release `v1.0.0` publicada a partir del tag creado para la primera versión del TP.
